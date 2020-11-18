@@ -1,0 +1,113 @@
+:root {
+    --primary-color: blue;
+}
+
+html * {
+    font-size: 16px !important;
+}
+
+body {
+    font-family: inter, sans-serif;
+}
+
+svg {
+    width: 20px;
+    height: 20px;
+}
+
+h1 {
+    font-size: 1.6rem !important;
+    font-weight: 700;
+}
+
+.header {
+
+    p {
+        position: relative;
+        top: -21px;
+    }
+
+}
+
+.container {
+
+
+
+    .divider {
+        height: 2px;
+        overflow: hidden;
+        background-color: #e0e0e0;
+        position: relative;
+        top: -25px;
+    }
+
+    .modeSwitch {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .switch {
+            position: relative;
+            top: -26px;
+
+            & label {
+                .lever {
+
+                    width: 60px;
+                    height: 30px;
+
+                    &::before,
+                    &::after {
+                        width: 18px;
+                        height: 18px;
+                        top: 4.9px;
+                        left: 5px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.switch label input[type=checkbox]:checked+.lever:before,
+.switch label input[type=checkbox]:checked+.lever:after {
+    left: 34px;
+}
+
+.container { 
+    width: 90%;
+
+    &__box {
+        height: 200px;
+        background: lightblue;
+        margin:10px 25px;
+
+
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            top: 25px;
+        }
+
+        .m {
+            padding-right: 10px;
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    p {
+        position: relative;
+        left: 11px;
+    }
+
+}
+
+.two {
+    .container__box {
+        height: 140px;
+    }
+}
