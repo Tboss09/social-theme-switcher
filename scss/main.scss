@@ -1,6 +1,21 @@
 :root {
     --primary-color: hsl(163, 72%, 41%);
     --primary-color-2: hsl(356, 69%, 56%);
+
+
+    --background: hsl(0, 0%, 100%);
+    --top-bg: hsl(225, 100%, 98%);
+    --card-bg: hsl(227, 47%, 96%);
+    --h1-color: hsl(230, 17%, 14%);
+    --text-color: hsl(228, 12%, 44%);
+}
+
+[data-dark] {
+    --background: hsl(230, 17%, 14%);
+    --top-bg: hsl(232, 19%, 15%);
+    --card-bg: hsl(228, 28%, 20%);
+    --h1-color: hsl(228, 34%, 66%);
+    --text-color: hsl(0, 0%, 100%);
 }
 
 html * {
@@ -9,6 +24,7 @@ html * {
 
 body {
     font-family: inter, sans-serif;
+    background: var(--background);
 }
 
 svg {
@@ -18,13 +34,25 @@ svg {
 
 h1 {
     font-weight: 700;
+    font-size: 1.5rem !important;
+    color: var(--h1-color);
+
+}
+
+p,
+span {
+    color: var(--text-color);
+    font-weight: 700;
+
 }
 
 .header {
 
     p {
         position: relative;
-        top: -21px;
+        top: -24px;
+        color: var(--text-color);
+        font-weight: 700;
     }
 
 }
@@ -51,10 +79,15 @@ h1 {
             top: -26px;
 
             & label {
+                & input[type=checkbox]:checked+.lever {
+                    background: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+                }
+
                 .lever {
 
-                    width: 60px;
+                    width: 60px; 
                     height: 30px;
+                    background: hsl(230, 22%, 74%);
 
                     &::before,
                     &::after {
@@ -66,6 +99,8 @@ h1 {
                 }
             }
 
+
+            // .switch label 
         }
     }
 }
@@ -81,10 +116,30 @@ h1 {
 
     &__box {
         height: 230px;
-        background: lightblue;
+        background: var(--card-bg);
         margin: 10px;
-        border-radius: 10px;
+        border-radius: 5px;
         padding-top: 10px;
+        border-top: 5px solid;
+
+        // border-top: 4px solid red;
+        &.f {
+            border-color: hsl(208, 92%, 53%);
+        }
+
+        &.t {
+            border-color: hsl(203, 89%, 53%);
+
+        }
+
+        &.i {
+            border-color: linear-gradient(#fdc468, #df4996);
+            // linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+        }
+
+        &.y {
+            border-color: hsl(348, 97%, 39%);
+        }
 
         .profile {
             display: flex;
@@ -100,15 +155,24 @@ h1 {
             align-items: center;
             justify-content: center;
 
+
             span {
+                font-weight: 700;
                 @extend .n;
                 position: relative;
                 top: -20px;
                 flex-direction: row;
+                color: var(--primary-color);
 
                 img {
                     padding-right: 3px;
                 }
+
+
+            }
+
+            .r {
+                color: var(--primary-color-2);
             }
 
             h1 {
@@ -120,8 +184,9 @@ h1 {
                 position: relative;
                 top: -25px;
                 letter-spacing: 5px;
-                // font-size: 1.5rem !important;
                 text-transform: uppercase;
+
+                // Some Boolean Expression to check 
             }
         }
 
@@ -132,14 +197,13 @@ h1 {
         }
     }
 
-
 }
 
 .two {
     .container__box {
         border-radius: 0px;
         height: 125px;
-
+        border: transparent;
 
         .view {
             display: flex;
@@ -151,6 +215,7 @@ h1 {
         svg {
             position: relative;
             top: 18px;
+            fill: hsl(348, 97%, 39%);
         }
     }
 
@@ -173,6 +238,8 @@ h1 {
             position: relative;
             top: 5px;
             align-self: flex-end !important;
+            color: var(--primary-color);
+
         }
 
         img {
@@ -180,9 +247,15 @@ h1 {
             top: -3px;
         }
     }
+
+    .r {
+        color: var(--primary-color-2);
+
+    }
 }
 
 .p {
+    font-size: 1.5rem !important;
     position: relative;
     left: 25px;
 }
