@@ -68,7 +68,7 @@ header {
 
 main {
     position: relative;
-    top: -75px;
+    top: -55px;
 }
 
 .container {
@@ -274,25 +274,36 @@ main {
     position: relative;
     left: 25px;
 }
-footer{
-        color: var(--footer);
+
+footer {
+    color: var(--footer);
 }
+
 // Media Query
 @media screen and (min-width:1000px) {
 
-    
-main {
-    position: relative;
-    top: -120px;
-}
-    h1{
+
+    main {
+        position: relative;
+        top: -120px;
+    }
+
+    h1 {
         font-size: 1.9rem !important;
     }
+
     .modeSwitch {
         justify-content: flex-end !important;
         position: relative;
-    top: -73px;
+        top: -73px;
+    }
 }
+
+// Small Screeen
+@media screen and (max-width:320px) {
+    main{
+        top: -50px ;
+    }
 }
 
 // Media Query
