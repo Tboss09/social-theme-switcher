@@ -2,7 +2,7 @@
     --primary-color: hsl(163, 72%, 41%);
     --primary-color-2: hsl(356, 69%, 56%);
 
-
+    --footer: hsl(0, 0%, 0%);
     --background: hsl(0, 0%, 100%);
     --top-bg: hsl(225, 100%, 98%);
     --card-bg: hsl(227, 47%, 96%);
@@ -10,7 +10,8 @@
     --text-color: hsl(228, 12%, 44%);
 }
 
-[data-dark] {
+[data-theme="dark"] {
+    --footer: hsl(0, 0%, 100%);
     --background: hsl(230, 17%, 14%);
     --top-bg: hsl(232, 19%, 15%);
     --card-bg: hsl(228, 28%, 20%);
@@ -46,8 +47,12 @@ span {
 
 }
 
-.header {
+header {
+    background: var(--top-bg);
+    height: 35vh;
+}
 
+.header {
     p {
         position: relative;
         top: -24px;
@@ -57,12 +62,21 @@ span {
 
 }
 
+.r {
+    color: var(--primary-color-2) !important;
+}
+
+main {
+    position: relative;
+    top: -75px;
+}
+
 .container {
 
 
 
     .divider {
-        height: 2px;
+        height: 1px;
         overflow: hidden;
         background-color: #e0e0e0;
         position: relative;
@@ -85,7 +99,7 @@ span {
 
                 .lever {
 
-                    width: 60px; 
+                    width: 60px;
                     height: 30px;
                     background: hsl(230, 22%, 74%);
 
@@ -120,7 +134,8 @@ span {
         margin: 10px;
         border-radius: 5px;
         padding-top: 10px;
-        border-top: 5px solid;
+        border-top: 6px solid;
+        border-image-slice: 1;
 
         // border-top: 4px solid red;
         &.f {
@@ -133,8 +148,11 @@ span {
         }
 
         &.i {
-            border-color: linear-gradient(#fdc468, #df4996);
             // linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%)
+            border-top: 5px solid;
+
+            border-image-source: linear-gradient(hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+
         }
 
         &.y {
@@ -171,9 +189,6 @@ span {
 
             }
 
-            .r {
-                color: var(--primary-color-2);
-            }
 
             h1 {
                 font-size: 3.20rem !important;
@@ -259,3 +274,25 @@ span {
     position: relative;
     left: 25px;
 }
+footer{
+        color: var(--footer);
+}
+// Media Query
+@media screen and (min-width:1000px) {
+
+    
+main {
+    position: relative;
+    top: -120px;
+}
+    h1{
+        font-size: 1.9rem !important;
+    }
+    .modeSwitch {
+        justify-content: flex-end !important;
+        position: relative;
+    top: -73px;
+}
+}
+
+// Media Query
