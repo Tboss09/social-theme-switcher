@@ -1,5 +1,6 @@
 :root {
-    --primary-color: blue;
+    --primary-color: hsl(163, 72%, 41%);
+    --primary-color-2: hsl(356, 69%, 56%);
 }
 
 html * {
@@ -16,7 +17,6 @@ svg {
 }
 
 h1 {
-    font-size: 1.6rem !important;
     font-weight: 700;
 }
 
@@ -58,9 +58,9 @@ h1 {
 
                     &::before,
                     &::after {
-                        width: 18px;
-                        height: 18px;
-                        top: 4.9px;
+                        width: 20px;
+                        height: 20px;
+                        top: 3.9px;
                         left: 5px;
                     }
                 }
@@ -105,13 +105,14 @@ h1 {
                 position: relative;
                 top: -20px;
                 flex-direction: row;
-                img{
+
+                img {
                     padding-right: 3px;
                 }
             }
 
             h1 {
-                font-size: 4rem !important;
+                font-size: 3.20rem !important;
                 line-height: 50%;
             }
 
@@ -136,17 +137,52 @@ h1 {
 
 .two {
     .container__box {
-        height: 140px;
+        border-radius: 0px;
+        height: 125px;
+
+
+        .view {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 0px 20px;
+        }
+
+        svg {
+            position: relative;
+            top: 18px;
+        }
     }
 
-    .postionL {
-        position: relative;
-        left: 35px;
-    }
-    .view{
+    .ndown {
         display: flex;
-justify-content: space-around;
-align-items: flex-start;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+
+        h1 {
+            font-weight: 700;
+            font-size: 2.1rem !important;
+            line-height: 0%;
+            margin: 0px;
+            padding-left: 10px;
+        }
+
+        span {
+            padding-right: 20px;
+            position: relative;
+            top: 5px;
+            align-self: flex-end !important;
+        }
+
+        img {
+            position: relative;
+            top: -3px;
+        }
+    }
 }
 
+.p {
+    position: relative;
+    left: 25px;
 }
